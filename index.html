@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kamvalethu's Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+  <!-- Header -->
+  <header class="bg-gray-900 text-white p-4 shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Kamvalethu Zitho</h1>
+      <nav>
+        <ul class="flex space-x-4">
+          <li><a href="#home" class="hover:text-gray-400">Home</a></li>
+          <li><a href="#about" class="hover:text-gray-400">About</a></li>
+          <li><a href="#skills" class="hover:text-gray-400">Skills</a></li>
+          <li><a href="#projects" class="hover:text-gray-400">Projects</a></li>
+          <li><a href="#contact" class="hover:text-gray-400">Contact Me</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="h-screen flex items-center justify-center bg-tan-800 text-white">
+    <div class="container mx-auto flex flex-col md:flex-row items-center">
+      <div class="w-full md:w-1/2 flex justify-center">
+        <img src="img/Profile pic.png" alt="My Photo" class="w-64 h-64 rounded-lg shadow-lg border-4 border-white">
+      </div>
+      <div class="w-full md:w-1/2 mt-4 md:mt-0 md:ml-6 bg-gray-700 p-6 rounded-lg shadow-lg">
+        <h2 class="text-4xl font-bold mb-4">Welcome to My Portfolio</h2>
+        <p class="text-lg">I am Kamvalethu, a tech-savvy professional with a passion for solving problems, learning new technologies, and delivering value. Explore my portfolio to learn more about my skills and journey.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 bg-white">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-8">About Me</h2>
+      <p class="text-center max-w-3xl mx-auto text-lg leading-relaxed">
+        Hi, I'm Kamvalethu, a professional with nearly three years of experience in IT Support and Software Development. Passionate about solving problems, learning new technologies, and helping businesses achieve their goals through technical expertise.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-16 bg-gray-100">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-8">Skills</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white p-6 shadow-lg rounded-lg">
+          <h3 class="text-xl font-bold mb-2">Frontend Development</h3>
+          <p>HTML, CSS, JavaScript, React, Redux</p>
+        </div>
+        <div class="bg-white p-6 shadow-lg rounded-lg">
+          <h3 class="text-xl font-bold mb-2">Backend Development</h3>
+          <p>Node.js, Express, MongoDB, MySQL</p>
+        </div>
+        <div class="bg-white p-6 shadow-lg rounded-lg">
+          <h3 class="text-xl font-bold mb-2">IT Support</h3>
+          <p>Troubleshooting, Customer Support, Technical Documentation</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-16 bg-white">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-8">Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-gray-100 p-6 shadow-lg rounded-lg">
+          <h3 class="text-xl font-bold mb-2">Project 1</h3>
+          <p>A brief description of your project. Highlight key features or technologies used.</p>
+          <a href="#" class="text-blue-500 hover:underline mt-2 block">View Project</a>
+        </div>
+        <div class="bg-gray-100 p-6 shadow-lg rounded-lg">
+          <h3 class="text-xl font-bold mb-2">Project 2</h3>
+          <p>A brief description of your project. Highlight key features or technologies used.</p>
+          <a href="#" class="text-blue-500 hover:underline mt-2 block">View Project</a>
+        </div>
+        <div class="bg-gray-100 p-6 shadow-lg rounded-lg">
+          <h3 class="text-xl font-bold mb-2">Project 3</h3>
+          <p>A brief description of your project. Highlight key features or technologies used.</p>
+          <a href="#" class="text-blue-500 hover:underline mt-2 block">View Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-white">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-8">Contact Me</h2>
+      <form id="contactForm" class="max-w-lg mx-auto">
+        <div class="mb-4">
+          <label for="name" class="block text-sm font-bold mb-2">Name</label>
+          <input type="text" id="name" name="name" class="w-full p-2 border border-gray-300 rounded-lg" required>
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-sm font-bold mb-2">Email</label>
+          <input type="email" id="email" name="email" class="w-full p-2 border border-gray-300 rounded-lg" required>
+        </div>
+        <div class="mb-4">
+          <label for="message" class="block text-sm font-bold mb-2">Message</label>
+          <textarea id="message" name="message" rows="4" class="w-full p-2 border border-gray-300 rounded-lg" required></textarea>
+        </div>
+        <button type="submit" class="bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-700">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white text-center p-4">
+    <div class="container mx-auto">
+      <p>&copy; 2025 Kamvalethu. All rights reserved.</p>
+      <!-- Social Media Links -->
+      <div class="mt-4 flex justify-center space-x-6">
+        <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" class="text-gray-400 hover:text-white">
+          <i class="fab fa-linkedin fa-2x"></i>
+        </a>
+        <a href="https://github.com/your-github-username" target="_blank" class="text-gray-400 hover:text-white">
+          <i class="fab fa-github fa-2x"></i>
+        </a>
+        <a href="https://www.instagram.com/your-instagram-profile" target="_blank" class="text-gray-400 hover:text-white">
+          <i class="fab fa-instagram fa-2x"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
