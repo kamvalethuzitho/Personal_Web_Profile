@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/kamvalethuzitho/Personal_Web_Profile/issues"
   },
-  "homepage": "https://github.com/kamvalethuzitho/Personal_Web_Profile#readme"
+  "homepage": "https://github.com/kamvalethuzitho/Personal_Web_Profile#readme",
+  "dependencies": {
+    "personal_web_profile": "file:"
+  }
 }
