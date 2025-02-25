@@ -1,4 +1,8 @@
 const mongoose = require('mongoose');
+const express = require('express');
+const cors = require('cors');
+
+const app = express()
 
 // Connect to MongoDB
 mongoose.connect('mongodb+srv://zithokamvalethu:<GkOQKJhoiYolSmAz>@websiteprofile.2awbu.mongodb.net/?retryWrites=true&w=majority&appName=WebsiteProfile', {
