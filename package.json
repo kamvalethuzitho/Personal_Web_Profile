@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/kamvalethuzitho/Personal_Web_Profile#readme",
   "dependencies": {
+    "mongoose": "^8.10.1",
     "personal_web_profile": "file:"
   }
 }
