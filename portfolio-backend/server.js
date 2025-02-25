@@ -1,31 +1,37 @@
-// server.js
-const express = require('express');
-const cors = require('cors');
+const mongoose = require('mongoose');
 
-const app = express();
-const PORT = process.env.PORT || 5000;
+// Connect to MongoDB
+mongoose.connect('mongodb+srv://zithokamvalethu:<GkOQKJhoiYolSmAz>@websiteprofile.2awbu.mongodb.net/?retryWrites=true&w=majority&appName=WebsiteProfile', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
-// Middleware
-app.use(cors()); // Enable CORS
-app.use(express.json()); // Parse JSON request bodies
+// Define a schema for form submissions
+const submissionSchema = new mongoose.Schema({
+  name: String,
+  email: String,
+  message: String,
+  date: { type: Date, default: Date.now },
+});
 
-// Route to handle form submissions
-app.post('/submit-form', (req, res) => {
+const Submission = mongoose.model('Submission', submissionSchema);
+
+// Update the form submission route
+app.post('/submit-form', async (req, res) => {
   const { name, email, message } = req.body;
 
-  // Validate input
   if (!name || !email || !message) {
     return res.status(400).json({ error: 'All fields are required.' });
   }
 
-  // Simulate saving the data (replace with actual database logic)
-  console.log('Form submission received:', { name, email, message });
+  try {
+    // Save the submission to the database
+    const submission = new Submission({ name, email, message });
+    await submission.save();
 
-  // Send a success response
-  res.status(200).json({ message: 'Thank you for your message! I will get back to you soon.' });
-});
-
-// Start the server
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+    res.status(200).json({ message: 'Thank you for your message! I will get back to you soon.' });
+  } catch (error) {
+    console.error('Error saving submission:', error);
+    res.status(500).json({ error: 'Failed to save submission.' });
+  }
 });
