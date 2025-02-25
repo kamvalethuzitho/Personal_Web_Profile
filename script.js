@@ -26,7 +26,7 @@
 
       try {
         // Send data to the backend API
-        const response = await fetch('https://personal-web-profile-cjvv.onrender.com', {
+        const response = await fetch('https://personal-web-profile-cjvv.onrender.com/submit-form', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
